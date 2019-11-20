@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import AppHead from "./components/app-header";
+import SearchPanel from "./components/search-panel";
+import TodoList from "./components/todo-list";
 
-const el = (
-  <div>
-    <h1>My TODO List</h1>
-    <input placeholder="search" />
-    <ul>
-      <li>Learn React</li>
-      <li>Build Awesome App</li>
-      <li>Go to sleep</li>
-    </ul>
-  </div>
-);
-
-ReactDOM.render(el, document.getElementById("root"));
+const App = () => {
+  return (
+    <div>
+      <AppHead />
+      <SearchPanel />
+      <TodoList />
+    </div>
+  );
+};
+ReactDOM.render(<App />, document.getElementById("root"));
